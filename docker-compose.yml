@@ -1,12 +1,6 @@
 version: '3.7'
 services:
   first-service:
-    build: path
+    build: ./docker
     ports:
       - "3000:3000"
-  second-service:
-    build: path
-    ports:
-      - "8080:3000"
-    depends_on:
-      - first-service
