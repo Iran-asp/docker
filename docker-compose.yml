@@ -1,6 +1,11 @@
 version: '3.7'
 services:
   first-service:
-    build: ./docker
+    build:
+      context: ./docker
+      args:
+        - PORT=3000
+    environment:
+      - NODE_ENV=Hello
     ports:
       - "3000:3000"
